@@ -51,7 +51,8 @@ const checkWinner=()=> {
       console.log("Winner");
       showWinner(pos1Val);
       winnerFound = true;
-      return; // Exit early, don't check draw
+      count = 0;
+      return; 
    
     }
   }
@@ -65,6 +66,8 @@ if (count === 9 && !winnerFound) {
 const resetGame = () => {
   turnO = true;
   enableBoxes();
+  winnerFound = false;
+  count = 0;
   msgContainer.classList.add("hide")
 }
 
